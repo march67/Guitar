@@ -1,5 +1,8 @@
-var builder = WebApplication.CreateBuilder(args);
+using API.Infrastructure;
+using Microsoft.EntityFrameworkCore;
 
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(builder.Configuration["ConnectionStrings:DefaultConnection"]));
 // Add services to the container.
 
 builder.Services.AddControllers();
