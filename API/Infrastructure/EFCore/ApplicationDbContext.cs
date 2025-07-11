@@ -1,7 +1,7 @@
 ﻿using API.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace API.Infrastructure
+namespace API.Infrastructure.EFCore
 {
     public class ApplicationDbContext : DbContext
     {
